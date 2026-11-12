@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#10100f"><title>Management Workspace | Experiences</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="config.js"></script></head>
+<body class="admin-body">
+  <section class="login-wrap" id="loginView"><div class="login-card"><a class="brand" href="index.html"><span class="brand-mark">KR</span><span class="brand-copy">KARELY RUIZ<small>MANAGEMENT WORKSPACE</small></span></a><p class="eyebrow">PRIVATE ACCESS</p><h1>Welcome back.</h1><p>Sign in with an authorised management account to manage enquiries, content, events and the visitor experience.</p><form id="loginForm"><label>Email address<input id="loginEmail" type="email" autocomplete="username" required maxlength="254"></label><label>Password<input id="loginPassword" type="password" autocomplete="current-password" required></label><button type="submit">Sign in securely</button><div class="login-message" id="loginMessage" aria-live="polite"></div></form><p class="admin-note">Access is limited to accounts added to the management allow-list in Supabase.</p><a class="text-link" href="index.html">← Return to website</a></div></section>
+
+  <div class="admin-shell" id="adminShell" hidden>
+    <aside class="admin-sidebar"><a class="brand" href="index.html"><span class="brand-mark">KR</span><span class="brand-copy">EXPERIENCES<small>MANAGEMENT</small></span></a><div class="admin-profile" id="adminProfile"></div>
+      <nav class="admin-nav" id="adminNav">
+        <button class="active" data-view="overview"><span>▦</span>Overview</button>
+        <button data-view="messages"><span>✉</span>Conversations</button>
+        <button data-view="scripts"><span>✧</span>Experience chats</button>
+        <button data-view="broadcasts"><span>◉</span>Global messages</button>
+        <button data-view="events"><span>◇</span>Tours & events</button>
+        <button data-view="fans"><span>◎</span>Meet the fans</button>
+        <button data-view="media"><span>▧</span>Media library</button>
+        <button data-view="design"><span>◈</span>Chat appearance</button>
+        <button data-view="community"><span>♧</span>Community</button>
+        <button data-view="settings"><span>⚙</span>Website settings</button>
+      </nav>
+      <div class="sidebar-foot"><a href="index.html">↗ View public website</a><button id="logoutButton" type="button">Sign out</button></div>
+    </aside>
+    <main class="admin-main"><header class="admin-top"><div><p class="eyebrow">PRIVATE WORKSPACE / MANAGEMENT</p><h1 id="adminPageTitle">Overview</h1></div><div class="admin-top-actions"><span class="admin-note" id="lastUpdated">Connecting…</span><button id="refreshButton" type="button">Refresh</button></div></header>
+      <section class="admin-view active" id="view-overview"></section>
+      <section class="admin-view" id="view-messages"></section>
+      <section class="admin-view" id="view-scripts"></section>
+      <section class="admin-view" id="view-broadcasts"></section>
+      <section class="admin-view" id="view-events"></section>
+      <section class="admin-view" id="view-fans"></section>
+      <section class="admin-view" id="view-media"></section>
+      <section class="admin-view" id="view-design"></section>
+      <section class="admin-view" id="view-community"></section>
+      <section class="admin-view" id="view-settings"></section>
+      <div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+  <script type="module" src="admin.js"></script>
+</body></html>

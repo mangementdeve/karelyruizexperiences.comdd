@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Explore experiences, public appearances, events, media and community updates.">
+  <title>Karely Ruiz | Experiences & Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body class="public-site">
+  <div class="announcement" id="announcement" hidden></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Karely Ruiz home"><span class="brand-mark">KR</span><span class="brand-copy">KARELY RUIZ<small>EXPERIENCES & COMMUNITY</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open navigation">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#experiences">Experiences</a><a href="#events">Tours & events</a><a href="#fans">Meet the fans</a><a href="#gallery">Gallery</a><a href="#community">Community</a>
+      <label class="language-control"><span class="sr-only">Language</span><select id="siteLanguage" aria-label="Choose language"><option value="en">EN</option><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option><option value="it">IT</option><option value="pt">PT</option><option value="nl">NL</option></select></label>
+      <a class="nav-cta" href="#experiences">Make an enquiry <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A WORLD OF MOMENTS · 2026 / 2027</p>
+        <h1>More than a moment.<br><em>A lasting memory.</em></h1>
+        <p class="hero-lede">Explore experiences, public appearances, shared moments and ways to stay connected.</p>
+        <div class="hero-actions"><a class="btn btn-gold" href="#experiences">Explore experiences <span>↗</span></a><a class="text-link" href="#gallery">Discover the gallery</a></div>
+        <div class="hero-signoff"><span class="sign-line"></span><span>Style · Creativity · Connection</span></div>
+      </div>
+      <div class="hero-art" aria-label="Featured editorial portrait">
+        <div class="hero-frame"><img src="https://sportal365images.com/process/smp-images-production/record.mx/16042026/c6b88c7d-8b94-4d99-af14-1afd79a7dfdc.jpg?format=webp&operations=autocrop%28960%3A540%29" alt="Publicly published event portrait" fetchpriority="high"></div>
+        <div class="hero-caption"><span>FEATURED MOMENT</span><b>Closer connections</b></div><div class="hero-stamp">KR<small>EXPERIENCES</small></div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="ticker" aria-label="Experience themes"><span>STYLE</span><i>✦</i><span>CREATIVITY</span><i>✦</i><span>COMMUNITY</span><i>✦</i><span>EXPERIENCES</span><i>✦</i><span>CONNECTION</span></section>
+
+    <section class="section intro" id="about">
+      <div><p class="eyebrow">THE EXPERIENCE</p><h2>Every story has<br><em>its own moment.</em></h2></div>
+      <div class="intro-text"><p>Find an enquiry pathway, discover published event information, or browse selected public media. Each enquiry is collected for review; dates, availability and participation are confirmed only through published information or a direct response from authorised management.</p><a class="text-link" href="https://www.instagram.com/karelyruiz/" target="_blank" rel="noopener noreferrer">Visit public Instagram profile ↗</a></div>
+    </section>
+
+    <section class="section experiences" id="experiences">
+      <div class="section-heading"><div><p class="eyebrow">DISCOVER</p><h2>Experiences <em>& moments</em></h2></div><p class="section-aside">Choose a pathway to begin a guided enquiry. Your selected experience will already be included in the conversation.</p></div>
+      <div class="experience-grid" id="experienceGrid" aria-live="polite">
+        <div class="loading-card">Loading experiences…</div>
+      </div>
+      <p class="fineprint">Submitting an enquiry does not confirm a booking, appearance, invitation, travel arrangement or availability.</p>
+    </section>
+
+    <section class="section listing-section" id="events">
+      <div class="section-heading"><div><p class="eyebrow">ON THE CALENDAR</p><h2>Tours <em>& events</em></h2></div><p class="section-aside">Browse published dates and event information. Ticket questions open a dedicated conversation for that event.</p></div>
+      <div id="tourAnnouncement" class="section-announcement" hidden></div><div id="eventsGrid" class="listing-grid"><div class="empty-state">Loading published events…</div></div>
+    </section>
+
+    <section class="fan-feature" id="fans">
+      <div class="fan-feature-art"><div class="fan-art-shape"><span>MEET</span><b>THE FANS</b><small>TOUR STOP EXPERIENCES</small></div></div>
+      <div class="fan-feature-copy"><p class="eyebrow">FAN CONNECTIONS</p><h2>Meet the fans.<br><em>Make it memorable.</em></h2><p>Explore separately announced fan-meeting opportunities connected to published appearances and tour stops. A tour date does not automatically include a fan meeting; only published, confirmed details will appear here.</p><div class="fan-list" id="fanStopsGrid"><div class="empty-state">Loading published fan meetings…</div></div></div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section gallery-head"><div><p class="eyebrow">A VISUAL JOURNEY</p><h2>Photos <em>& videos</em></h2></div><a class="text-link" href="https://www.instagram.com/karelyruiz/" target="_blank" rel="noopener noreferrer">Explore public posts ↗</a></div>
+      <div class="gallery-filters" role="group" aria-label="Filter gallery"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="photo">Photos</button><button class="filter" data-filter="video">Videos & reels</button></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="gallery-note">Media opens at its published source or approved embed. Additional photos and video links can be added through the media workspace.</p>
+    </section>
+
+    <section class="section about-band">
+      <div class="about-photo"><img src="https://tvazteca-yucatan-prod.web.arc-cdn.net/resizer/v2/YWFFNZMGKRD7BM7GMXT4HP53SE.jpg?auth=428bc4163a305188b4297205f514d94765eb1ae29c93859c9043ac9c05ad1d2c&height=1066&width=800" alt="Publicly reported appearance image" loading="lazy"></div>
+      <div class="about-copy"><p class="eyebrow">THE DETAILS MATTER</p><h2>Thoughtful by design.<br><em>Personal in every detail.</em></h2><p>A considered experience starts with a clear conversation. Share the essentials, choose the right enquiry category and keep your reference details close while the request is reviewed.</p><div class="about-points"><span>✦ Clear enquiry pathways</span><span>✦ Private conversation history</span><span>✦ Published event information</span><span>✦ Human follow-up when requested</span></div></div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-copy"><div id="communityAnnouncement" class="section-announcement" hidden></div><p class="eyebrow">BE PART OF THE CIRCLE</p><h2>Stay close.<br><em>Stay connected.</em></h2><p>Leave your details to request community updates. Your request will be reviewed by the management team.</p>
+        <form id="communityForm" class="stack-form"><div class="form-row"><label for="communityName">Your name<input id="communityName" name="name" autocomplete="name" required maxlength="120" placeholder="Full name"></label><label for="communityEmail">Email address<input id="communityEmail" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label></div><label for="communityCountry">Country (optional)<input id="communityCountry" name="country" autocomplete="country-name" maxlength="120" placeholder="Your country"></label><label class="consent-line"><input id="communityConsent" type="checkbox" required><span>I have read the <a href="privacy.html">Privacy Policy</a> and agree to the use of my information to respond to this request.</span></label><button class="btn btn-gold" type="submit">Request to join <span>↗</span></button><div id="communityMessage" class="form-message" aria-live="polite"></div></form>
+      </div><div class="community-art"><div class="community-orb">KR<small>COMMUNITY</small></div><span class="community-art-note">Explore · Connect · Celebrate</span></div>
+    </section>
+
+    <section class="section contact" id="contact"><div class="contact-copy"><p class="eyebrow">LET'S TALK</p><h2>Have a project<br><em>in mind?</em></h2><p>Start with a guided enquiry or visit the public social channels for more updates.</p><div class="contact-social"><a href="https://www.instagram.com/karelyruiz/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/karelyruiz001/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://linktr.ee/KarelyRuizOficial" target="_blank" rel="noopener noreferrer">Social links ↗</a></div><button class="btn btn-dark" id="generalEnquiry" type="button">Start a general enquiry ↗</button></div><div class="contact-aside"><span class="contact-mark">KR</span><p>One conversation at a time.<br>Every detail considered.</p></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">KR</span><span class="brand-copy">KARELY RUIZ<small>EXPERIENCES & COMMUNITY</small></span></a><div class="footer-links"><a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a><a href="terms.html">Terms</a><a href="dashboard.html">Management</a></div><small>© <span id="year"></span> · All rights reserved.</small></footer>
+
+  <div class="experience-chat-overlay" id="experienceChat" aria-hidden="true">
+    <section class="experience-chat-room" role="dialog" aria-modal="true" aria-labelledby="expChatTitle">
+      <header class="exp-chat-head"><div class="chat-brand"><span class="chat-avatar" id="chatAvatar">KR</span><div><small id="chatAssistantName">GUEST EXPERIENCE ASSISTANT</small><h3 id="expChatTitle">Experience enquiry</h3></div></div><button id="closeExperienceChat" aria-label="Close chat" type="button">×</button></header>
+      <div class="exp-chat-context" id="expChatContext">Your selected enquiry</div><div class="exp-chat-messages" id="expChatMessages" aria-live="polite"><div class="chat-loading">Opening your conversation…</div></div><div class="exp-chat-quick" id="expChatQuick"></div>
+      <div class="management-contact" id="managementContact" hidden><p id="managementContactPrompt">Tell us who we should contact when management reviews your request.</p><form id="managementContactForm"><label>Your name<input id="handoverName" autocomplete="name" required maxlength="120"></label><label>Email address<input id="handoverEmail" autocomplete="email" type="email" required maxlength="254"></label><div class="management-actions"><button class="btn btn-gold" type="submit">Send request</button><button class="text-button" id="cancelHandover" type="button">Cancel</button></div></form></div>
+      <form class="exp-chat-compose" id="expChatForm"><input id="expChatInput" autocomplete="off" maxlength="2000" placeholder="Write your message…" required><button type="submit" id="chatSendButton">Send</button></form><div class="exp-chat-bottom"><button id="requestManagement" type="button">Speak to management</button><span>Enquiries are subject to review.</span></div>
+    </section>
+  </div>
+
+  <div class="cookie-notice" id="cookieNotice" hidden><div><strong>Your privacy matters</strong><p>Essential browser storage keeps your conversation session and remembers your cookie choice. No advertising trackers are installed by this website.</p><a href="cookies.html">Cookie details</a> · <a href="privacy.html">Privacy policy</a></div><div class="cookie-actions"><button id="cookieReject" type="button">Essential only</button><button id="cookieAccept" type="button">Accept</button></div></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

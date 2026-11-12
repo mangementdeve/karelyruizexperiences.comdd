@@ -1,0 +1,13 @@
+{
+  "name": "experiences-community-v2",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "check": "node --check app.js && node --check admin.js && node --check policy.js && node --check dev-server.mjs"
+  }
+}
